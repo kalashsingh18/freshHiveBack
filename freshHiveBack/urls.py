@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from form import urls as formurls
+from UserResgistration import urls as user_registration
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("create_form",include(formurls)),
+    path("",include(user_registration)),
     
 ]
