@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "form",
     "rest_framework",
+    "UserResgistration",
 ]
 
 MIDDLEWARE = [
