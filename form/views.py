@@ -44,8 +44,8 @@ question=CreateQuestion.as_view()
 def getForm(request):
     if request.method=="POST":
         if request.data:
-            # id=request.data["id"]
-            form=models.createform.objects.filter(id=1)
+            id=request.data["id"]
+            form=models.createform.objects.filter(id=id)
             formdata=form.values()
             print(formdata[0])
             questions=models.Question.objects.filter(form=formdata[0]["id"]).values()
