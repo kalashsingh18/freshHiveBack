@@ -29,12 +29,12 @@ class Question(models.Model):
     def __str__(self):
         return self.question_text
 
-# class Choice(models.Model):
-#     question = models.ForeignKey(Question, related_name='choices', on_delete=models.CASCADE)
-#     choice_text = models.CharField(max_length=100)
+class Choice(models.Model):
+    question = models.ForeignKey(Question, related_name='choices', on_delete=models.CASCADE)
+    choice_text = models.CharField(max_length=100)
 
-#     def __str__(self):
-#         return self.choice_text
+    def __str__(self):
+        return self.choice_text
 
 # class Answer(models.Model):
 #     question = models.ForeignKey(Question, related_name='answers', on_delete=models.CASCADE)

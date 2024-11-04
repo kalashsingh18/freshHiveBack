@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer
-from .models import createform,Question
+from .models import createform,Question,Choice
 class Createformserializer(ModelSerializer):
     class Meta:
        model=createform
@@ -7,4 +7,8 @@ class Createformserializer(ModelSerializer):
 class Questionformserializer(ModelSerializer):
     class Meta:
         model=Question
+        fields="__all__"
+class Choiceformserializer(ModelSerializer):
+    class Meta:
+        model=Choice
         fields="__all__"
